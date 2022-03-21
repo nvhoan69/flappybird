@@ -93,3 +93,12 @@ float View::fps()
 
     return (1000.0f * _frameCount / elapsedTime);
 }
+
+int average (int aa, int bb)
+{
+return (aa+bb)/2;
+}
+float add (int aa, int bb)
+{
+	return aa+bb;
+}

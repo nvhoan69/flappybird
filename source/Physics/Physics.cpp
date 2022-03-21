@@ -180,6 +180,12 @@ bool Physics::collisionCheck()
     birdRect.width = bird->x() + bird->boundingRect().width();
     birdRect.height = bird->y() + bird->boundingRect().height();
 
+//add duplicate
+birdRect.x = bird->x();
+    birdRect.y = bird->y();
+    birdRect.width = bird->x() + bird->boundingRect().width();
+    birdRect.height = bird->y() + bird->boundingRect().height();
+
     if(((birdRect.width > game->scene->pipe[1][1]->pos().x()) &&
         (birdRect.width < game->scene->pipe[1][1]->boundingRect().width() + game->scene->pipe[1][1]->pos().x())) &&
             (birdRect.height > game->scene->pipe[1][1]->pos().y() ||
