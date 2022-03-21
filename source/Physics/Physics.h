@@ -44,6 +44,12 @@ public:
         qreal height;
     }rectangle;
 
+typedef struct{
+int a;
+float b;
+float z;
+}teststruct;
+
 private:
     int pipeCriticX;
 

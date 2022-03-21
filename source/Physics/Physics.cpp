@@ -372,3 +372,7 @@ void Physics::switchOnlyGroundMove()
     physicsTimer->setInterval(onlyGround ? updateInterval : updateInterval * PHYSICS_ONLYGROUND_SLOW_RATE);
     onlyGround = !onlyGround;
 }
+
+void draft()
+{
+}
