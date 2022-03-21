@@ -99,6 +99,14 @@ AI::AI(class Game *parent_game, int aiNeuronCount, int aiBatchSize, int aiEpochs
             predictionBar->setVisible(true);
         birdSpeed->start();
         update();
+	if(0)
+        {
+            vectorLine->setVisible(false);
+            birdSpeedVectorLine->setVisible(false);
+            predictionBar->setVisible(false);
+            birdSpeed->stop();
+            return;
+        }
     });
     updater->start();
 

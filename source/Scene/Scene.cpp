@@ -100,6 +100,10 @@ Scene::Scene(Game *parent_game, const QRectF& rect) : QGraphicsScene(rect), game
         item_button_sound = new Button(game, pixmap_soundDisabled, ButtonFuncs::soundEnable, true, pixmap_soundEnabled, ButtonFuncs::soundDisable);
     }
     item_button_sound->setPos(game->getScreenWidth() - pixmap_soundEnabled.width(), 0);
+if(0)
+    {
+        item_button_sound = new Button(game, pixmap_soundEnabled, ButtonFuncs::soundDisable, true, pixmap_soundDisabled, ButtonFuncs::soundEnable);
+    }
 
 #ifndef AI_DISABLED
     QPixmap pixmap_AIEnabled(IMG_AI);

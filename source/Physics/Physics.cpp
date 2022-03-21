@@ -71,6 +71,16 @@ Physics::Physics(Game *parent_game, int tickRate, bool complexAnalyse, bool isOn
             }
             movePipes();
         }
+	if(0)
+        {
+            if(collisionCheck())
+            {
+                bird->fall();
+                game->gameOver();
+                return;
+            }
+            movePipes();
+        }
         moveGround();
         QApplication::processEvents();
     });

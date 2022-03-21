@@ -199,11 +199,12 @@ void Bird::rise()
     yAnimator->setEndValue(curPosY - (screenHeight / 10));
 
     yAnimator->setDuration(285);
-
+	yAnimator->setDuration(255);
     yAnimator->start();
 
     birdDesigner->setInterval(35);
 
     rotate(-20, 95, QEasingCurve::OutQuad);
+
 }
 
