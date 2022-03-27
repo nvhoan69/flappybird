@@ -29,10 +29,10 @@ public:
     Physics(class Game *parent_game, int tickRate = 5, bool complexAnalyse = 0, bool isOnlyGround = 0, qreal speedFactor = 1.0, bool isCollisionDetectionDisabled = 0);
     virtual ~Physics();
 
-    void start();
-    void stop();
     void switchOnlyGroundMove();
 
+    void start();
+    void stop();
     bool isOnlyGround();
 
     static int randInt(int low, int high);
@@ -45,10 +45,10 @@ public:
     }rectangle;
 
 typedef struct{
-int a;
-float b;
-float z;
-}teststruct;
+	qreal x;
+	qreal y;
+	float t;
+} teststruct;
 
 private:
     int pipeCriticX;
@@ -58,31 +58,31 @@ private:
     void moveGround();
     void movePipes();
 
-    bool collisionDetectionDisabled;
     bool pipeMarkers[4];
     bool markers[3];
-
     rectangle birdRect;
     rectangle _itemPipe;
+    bool collisionDetectionDisabled;
 
-    class QTimer *physicsTimer;
 
     static int pipeCriticXFinder(const class QGraphicsPixmapItem& item_pipe);
 
     class QTransform *_transform;
 
+    class QTimer *physicsTimer;
+
 protected:
-    class Game *game;
-
-    class Bird *bird;
-
     bool complexAnalysis;
     bool onlyGround;
+    class Game *game;
 
-    int updateInterval;
 
     virtual bool collisionCheck();
     virtual bool collisionCheckComplex(const class QGraphicsPixmapItem& item_pipe);
+    class Bird *bird;
+
+
+    int updateInterval;
 };
 
 #endif // PHYSICS_H
