@@ -103,3 +103,8 @@ float average (int aa, int bb)
 {
 	return add(aa, bb) / 2;
 }
+
+float multiply (int aa, int bb)
+{
+	return aa * bb;
+}
