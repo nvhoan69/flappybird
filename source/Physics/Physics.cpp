@@ -171,6 +171,8 @@ bool Physics::collisionCheckComplex(const QGraphicsPixmapItem& item_pipe)
 bool Physics::collisionCheck()
 {
     bool bTrue = true;
+    // some change for testing
+    int var = 10 + 20;
 
     if(collisionDetectionDisabled)
         bTrue = false;
